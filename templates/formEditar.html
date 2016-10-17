@@ -1,0 +1,14 @@
+<center>
+	<form>
+		<input type="text" placeholder="Descripción" ng-model="objItemSeleccionado.descripcion"><br>
+		<input type="text" placeholder="Cantidad" ng-model="objItemSeleccionado.cantidad"><br>
+		<select ng-model="objItemSeleccionado.categoria">
+			<option value="">Seleccione una categoria</option>
+			<option value="categoria_1">categoria 1</option>
+			<option value="categoria_2">categoria 2</option>
+			<option value="categoria_3">categoria 3</option>
+		</select>
+		<button ng-click="editarItem()">Aceptar</button>
+		<br>
+	</form>
+</center>

@@ -1,0 +1,28 @@
+<html>
+<head>
+	<title>Plantilla Angular JS - Routing</title>
+</head>
+<body ng-app="app">
+	<div ng-view=""></div>
+	<!-- Angular -->
+	<script type="text/javascript" src="js/angular/angular.min.js"></script>
+	<script type="text/javascript" src="js/angular/angular-route.min.js"></script>
+	<!-- AngularFire -->
+    <script src="https://cdn.firebase.com/libs/angularfire/2.0.2/angularfire.min.js"></script>
+	<script type="text/javascript" src="js/app.js"></script>
+	<script type="text/javascript" src="js/controllers/generalCtrl.js"></script>
+	<!-- Firebase -->
+	<script src="https://www.gstatic.com/firebasejs/3.5.0/firebase.js"></script>
+	<script>
+	  // Initialize Firebase
+	  var config = {
+	    apiKey: "AIzaSyAA_VRnC5KTr9AUqzNsFOedu5OI6vfzOH0",
+	    authDomain: "bdplantillasjs.firebaseapp.com",
+	    databaseURL: "https://bdplantillasjs.firebaseio.com",
+	    storageBucket: "",
+	    messagingSenderId: "478838947941"
+	  };
+	  firebase.initializeApp(config);
+	</script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<h1>{{titulo}}</h1>
+<span>{{bienvenido}}</span>
+
+<a href="#agregarItem">Agregar item</a>
+
+<table border="1">
+	<tr>
+		<td ng-click="orderB('descripcion')">Descripción</td>
+		<td ng-click="orderB('cantidad')">Cantidad</td>
+		<td ng-click="orderB('categoria')">Categoria</td>
+		<td>Modificar</td>
+		<td>Eliminar</td>
+	</tr>
+	<tr ng-repeat="item in objBDItem | orderBy:orderValor:reverse">
+		<td>{{item.descripcion}}</td>
+		<td>{{item.cantidad}}</td>
+		<td>{{item.categoria}}</td>
+		<td><a href="#/editarItem/{{item.$id}}">editar</a></td>
+		<td style="color:red;" ng-click="eliminarItem(item)">eliminar</td>
+	</tr>
+</table>
