@@ -1,0 +1,318 @@
+@media screen {
+  html,body,h1,h2,h3,h4,h5,h6,span {font-family: "Roboto", sans-serif}
+	body{
+		background-color: #353940
+	 }
+
+	.separador1{
+		height: 50px;
+	 }
+	.separador2{
+		height: 25px;
+	 }
+	.contenedor{
+		height: 980px;
+	 }
+	.perfil{	
+		background-size: 250px 250px;
+		background-repeat: no-repeat;
+		border-radius: 200px 200px 200px 200px;
+		-moz-border-radius: 200px 200px 200px 200px;
+		-webkit-border-radius: 200px 200px 200px 200px;
+		border: 0px solid #000000;
+		width: 250px;
+		height: 250px;
+		-webkit-transition: background-image 1s ease-in-out;
+		-moz-transition: background-image 1s ease-in-out;
+		-o-transition: background-image 1s ease-in-out;
+		-ms-transition: background-image 1s ease-in-out;
+		transition: background-image 1s ease-in-out;
+	 }
+	 .imgPCV{
+		border-radius: 200px 200px 200px 200px;
+		-moz-border-radius: 200px 200px 200px 200px;
+		-webkit-border-radius: 200px 200px 200px 200px;
+		-o-border-radius: 200px 200px 200px 200px;
+		-ms-border-radius: 200px 200px 200px 200px;	
+		border: 0px solid #000000;
+		width: 250px; 
+		height: 250px;		
+	}
+	div.images-container{
+	    position: relative;
+	    background-size: 250px 250px;
+		background-repeat: no-repeat;
+		border-radius: 200px 200px 200px 200px;
+		-moz-border-radius: 200px 200px 200px 200px;
+		-webkit-border-radius: 200px 200px 200px 200px;
+		border: 0px solid #000000;
+		width: 250px;
+		height: 250px;
+	    
+	}
+	div.images-container > img{
+	    display: block;
+	 	background-size: 250px 250px;
+		background-repeat: no-repeat;
+		border-radius: 200px 200px 200px 200px;
+		-moz-border-radius: 200px 200px 200px 200px;
+		-webkit-border-radius: 200px 200px 200px 200px;
+		border: 0px solid #000000;
+		width: 250px;
+		height: 250px;   
+	    position: absolute;
+	    /* transitions */
+	    -webkit-transition: all 1s ease;
+	       -moz-transition: all 1s ease;
+	        -ms-transition: all 1s ease;
+	         -o-transition: all 1s ease;
+	            transition: all 1s ease;
+	    
+	}
+	div.images-container > img:nth-child(1){
+	    filter: alpha(opacity=100);
+	    opacity: 1;
+	    z-index: 2;
+	}
+	div.images-container > img:nth-child(2){
+	    filter: alpha(opacity=0);
+	    opacity: 0;
+	    z-index: 1;
+	}
+	div.images-container:hover > img:nth-child(1){ 
+	    filter: alpha(opacity=0);
+	    opacity: 0;
+	    z-index: 1;
+	}
+	div.images-container:hover > img:nth-child(2){ 
+	    filter: alpha(opacity=100);
+	    opacity: 1;
+	    z-index: 2;
+	}
+
+	.datos{
+		color: white;
+	 }
+	.contacto{
+		width: 75%;
+		padding: 5px 0px 5px 0px;
+		border: 3px solid #FFFFFF;
+	 }
+	.conocimientos{
+		color: white;font-size: 1.25em;
+	 }
+	.subtitulo{
+		font-size: 1.5em;
+	 }
+	.parrafo{
+		margin: 0 15px 0 15px;
+	 }
+	.icono{
+		width: 50px;
+	 }
+	.columna1{
+		height: 980px;
+		transition: all 0.5s ease;
+		}
+	.columna2{
+		height: 980px;
+		transition: all 0.5s ease;
+		background-color: white;
+		}
+	.transparencia{
+		border-color: transparent;
+		background-color: transparent;
+	 }
+	.escuela{
+		font-size: 1.7em;
+	 }
+	.escuelaF{
+		background-color: #483E3C;
+		color: white;
+		padding: 5px 15px 5px 15px;
+	 }
+	.fondo1{
+		transition: all 0.5s ease;
+	}
+	#fotoOK {
+	    visibility: hidden;
+	    min-width: 250px;
+	    margin-left: -125px;
+	    background-color: #333;
+	    color: #fff;
+	    text-align: center;
+	    border-radius: 2px;
+	    padding: 16px;
+	    position: fixed;
+	    z-index: 1;
+	    left: 50%;
+	    bottom: 30px;
+	    font-size: 17px;
+	}
+	#fotoOK.show {
+	    visibility: visible;
+	    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+	    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+	}
+	#perfilOK {
+	    visibility: hidden;
+	    min-width: 250px;
+	    margin-left: -125px;
+	    background-color: #333;
+	    color: #fff;
+	    text-align: center;
+	    border-radius: 2px;
+	    padding: 16px;
+	    position: fixed;
+	    z-index: 1;
+	    left: 50%;
+	    bottom: 30px;
+	    font-size: 17px;
+	}
+	#perfilOK.show {
+	    visibility: visible;
+	    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+	    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+	}
+
+	@-webkit-keyframes fadein {
+	    from {bottom: 0; opacity: 0;}
+	    to {bottom: 30px; opacity: 1;}
+	}
+
+	@keyframes fadein {
+	    from {bottom: 0; opacity: 0;}
+	    to {bottom: 30px; opacity: 1;}
+	}
+
+	@-webkit-keyframes fadeout {
+	    from {bottom: 30px; opacity: 1;}
+	    to {bottom: 0; opacity: 0;}
+	}
+
+	@keyframes fadeout {
+	    from {bottom: 30px; opacity: 1;}
+	    to {bottom: 0; opacity: 0;}
+	}
+}
+
+@media print {
+  html,body,h1,h2,h3,h4,h5,h6,span {font-family: "Roboto", sans-serif}
+	.separador1{
+		height: 50px;
+	 }
+	.separador2{
+		height: 25px;
+	 }
+	.contenedor{
+		height: 980px;
+	 }
+	 .separador{
+	 	height: 100px;
+	 }
+	.perfil{
+		background-size: 250px 250px;
+		background-repeat: no-repeat;
+		border-radius: 200px 200px 200px 200px;
+		-moz-border-radius: 200px 200px 200px 200px;
+		-webkit-border-radius: 200px 200px 200px 200px;
+		border: 0px solid #000000;
+		width: 250px;
+		height: 250px;
+		-webkit-transition: all 1s ease-in-out;
+		-moz-transition: all 1s ease-in-out;
+		-o-transition: all 1s ease-in-out;
+		transition: all 1s ease-in-out;
+	 }
+	 .perfilImpresion{	
+		border-radius: 200px 200px 200px 200px;
+		-moz-border-radius: 200px 200px 200px 200px;
+		-webkit-border-radius: 200px 200px 200px 200px;
+		border: 0px solid #000000;
+		width: 100%;
+	 }
+	#imgFP{
+		display: block;
+	 	background-size: 250px 250px;
+		background-repeat: no-repeat;
+		border-radius: 200px 200px 200px 200px;
+		-moz-border-radius: 200px 200px 200px 200px;
+		-webkit-border-radius: 200px 200px 200px 200px;
+		-o-border-radius: 200px 200px 200px 200px;
+		-ms-border-radius: 200px 200px 200px 200px;
+		margin-left: 2.5% !important;
+		margin-top: 2.5% !important;
+		border: 0px solid #000000;
+		width: 250px;
+		height: 250px;   
+	    position: absolute;
+	}
+	.imgPCV{
+		border-radius: 200px 200px 200px 200px !important;
+		-moz-border-radius: 200px 200px 200px 200px !important;
+		-webkit-border-radius: 200px 200px 200px 200px !important;
+		-o-border-radius: 200px 200px 200px 200px !important;
+		-ms-border-radius: 200px 200px 200px 200px !important;	
+		border: 0px solid #000000;
+		width: 250px; 
+		height: 175px;		
+	}
+	.fondo1{
+		transition: all 0.5s ease;
+		background-color: #2471A3;
+	}
+	#imgFPH{
+		visibility: hidden;
+	}
+	.datos{
+		color: white !important;
+		font-size: 1.25em !important;
+		margin-left: 5% !important;
+	 }
+	.contacto{
+		width: 75%;
+		padding: 5px 0px 5px 0px;
+		border: 3px solid #FFFFFF;
+		/*margin-right: 15% !important;*/
+		margin-left: 5% !important;
+	 }
+	 .dts{
+	 	margin-left: 5% !important;
+	 }
+	.conocimientos{
+		color: white !important;
+		font-size: 1.25em !important;
+		margin-left: 5% !important;
+	 }
+	.subtitulo{
+		font-size: 1.5em;
+	 }
+	.parrafo{
+		margin: 0 15px 0 15px;
+	 }
+	.icono{
+		width: 50px;
+	 }
+	.columna1{
+		background-color: #483E3C !important;
+		min-height: 1162.5px;
+		}
+	.columna2{
+		min-height: 1162.5px;
+	}
+	.transparencia{
+		border-color: transparent;
+		background-color: transparent;
+	 }
+	.escuela{
+		font-size: 1.7em;
+		margin-top: -20px !important;
+		margin-bottom: -10px !important;
+	 }
+	.escuelaF{
+		background-color: #483E3C;
+		color: white;
+		padding: 5px 15px 5px 15px;
+	 }
+}
+

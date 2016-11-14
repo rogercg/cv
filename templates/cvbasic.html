@@ -1,0 +1,103 @@
+<div style="height: 10px;"></div>
+<div class="row" style="background-color: white; width: 90%; margin: 0 0 5% 5%;">
+<br>
+	<div class="col-sm-12">
+
+		<table>
+		  <tr style="width: 100%;height: 20%;">
+		    <td width="60%" style="padding-left: 20%;" align="center">
+		    	<span style="font-size: 1.5em;">{{objP.nombres}} {{objP.apellidos}}</span><br>
+				<span style="font-size: 1.75em;">{{objP.profesion}}</span><br>
+				<span class="">{{objP.telefono}}</span><br>
+				<span class="" >{{objP.correo}}</span><br><br><br>
+		    </td>
+		    <td width="20%" height="20%" >
+		    	<img align="pull-right" class="imgPCV" src="{{objP.imgPerfil}}">
+		    </td>
+		  </tr>
+		</table>
+	</div>
+	<br>
+	<div class="col-sm-12">
+		<br>
+		<p>{{objP.perfil}}</p>
+	</div>
+	
+	<h3 class="col-sm-12" style="font-weight: bold;">Estudios</h3>
+	<div class="col-sm-12" ng-repeat="escuela in objBDEstudios">
+		<h4 style="font-weight: bold;padding-left: 5px;">{{escuela.escuela}}
+            <span class="pull-right">{{escuela.fechas}}</span>
+        </h4>
+        <p style="padding-left: 5px;">{{escuela.descripcion}}</p>
+	</div>
+	<h3 class="col-sm-12" style="font-weight: bold;">Experiencia</h3>
+	<div class="col-sm-12" ng-repeat="experiencia in objBDExperiencia">		
+			<h4 style="font-weight: bold;padding-left: 5px;">{{experiencia.empresa}}
+				<span class="pull-right" style="font-weight: bold;">{{experiencia.fecha}}</span>
+			</h4>
+			<p style="font-weight: bold;padding-left: 5px;">{{experiencia.cargo}}</p>
+			<p style="padding-left: 5px;">{{experiencia.descripcionCargo}}</p>
+	</div>
+	
+	<div class="col-xs-6 col-md-6 col-sm-6">
+	<h3 class="" style="font-weight: bold;">Habilidades</h3>
+		<table>
+		  <tr style="width: 100%">
+		    <td width="100%"><span style="padding-left: 5px;" ng-repeat="h in OHabilidades">{{h}} - </span></td>
+		    <td width="100%"></td>
+		  </tr>
+		</table>
+	</div>
+	
+	<div class="col-xs-6 col-md-6 col-sm-6">
+	<h3 class="" style="font-weight: bold;">Idiomas</h3>
+		<table>
+		  <tr style="width: 100%">
+		    <td width="100%"><span style="padding-left: 5px;" ng-repeat="i in OIdiomas">{{i}} - </span></td>
+		    <td width="100%"></td>
+		  </tr>
+		</table>
+	</div>
+</div>
+<div style="height: 20px;"></div>
+<!-- Modal -->
+<div class="modal fade" id="mostrarMsjImpresionBasic" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title" align="center">¿ Como imprimir ?</h4>
+        </div>
+        <div class="modal-body">     
+          <div class="row">
+          <p style="padding: 5px 5px 5px 5px;">Si tu navegador es Google Chrome necesitas quitar los márgenes y activar los gráficos en segundo plano:</p>
+            <div class="col-xs-6 col-md-6 col-sm-6 col-lg-6" align="center">
+              <a target='_blank' href="img/impresion/impresionChrome.png"><img style="width: 100%;" src="img/impresion/impresionChrome.png"></a>
+            </div>
+            <div class="col-xs-6 col-md-6 col-sm-6 col-lg-6" align="center">
+              <a target='_blank' href="img/impresion/impresion2Chrome.png"><img style="width: 100%;" src="img/impresion/impresion2Chrome.png"></a>
+            </div>
+          </div>
+          <br>
+          <div class="row">
+          <p style="padding: 5px 5px 5px 5px;">Si tu navegador es Firefox necesitas quitar los márgenes y activar la opcion de imprimir fondo(colores e imágenes):</p>
+            <div class="col-xs-4 col-md-4 col-sm-4 col-lg-4" align="center">
+              <a target='_blank' href="img/impresion/impresionFirefox.png"><img style="width: 100%;" src="img/impresion/impresionFirefox.png"></a>
+            </div>
+            <div class="col-xs-4 col-md-4 col-sm-4 col-lg-4" align="center">
+              <a target='_blank' href="img/impresion/impresionFirefox2.png"><img style="width: 100%;" src="img/impresion/impresionFirefox2.png"></a>
+            </div>
+            <div class="col-xs-4 col-md-4 col-sm-4 col-lg-4" align="center">
+              <a target='_blank' href="img/impresion/impresionFirefox3.png"><img style="width: 100%;" src="img/impresion/impresionFirefox3.png"></a>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">          
+          <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+      
+    </div>
+</div>

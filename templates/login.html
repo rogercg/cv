@@ -1,0 +1,25 @@
+<div class="row" style="background-color: transparent;width: 50%;margin-left: 25%;margin-right: 25%;margin-top: 7.5%;">
+		<div class="row">
+			<div class="col-sm-6">
+				<img class="animated fadeIn" style="width: 50%;margin-left: 25%;margin-right: 25%;" src="img/logo01.png">
+			</div>
+			<div class="col-sm-6" align="center">
+				<h1 class="animated bounceInLeft" id="titulo" style="color:white;">CVonline</h1>
+				<h4 class="animated bounceInLeft" id="slogan" style="color:white;">Tu experiencia y aptitudes en linea</h4>
+			</div>
+		</div>
+		<div class=" row animated fadeInDown" id="formulario" >
+			<div style="margin-top: 5%;"></div>
+			<div class="form-group col-sm-12">
+				<!--<label for="loginEmail" style="color: white;">Correo:</label>-->
+				<input type="text" class="form-control" ng-model="login.email" id="loginEmail" placeholder="Email">
+			</div>
+			<div class="form-group col-sm-12">
+				<!--<label for="loginContrasena" style="color: white;">Contraseña:</label>-->
+				<input type="password" class="form-control" ng-model="login.contrasena" id="loginContrasena" placeholder="Contraseña">
+			</div>
+			<div class="form-group col-sm-12">
+				<input type="button" ng-click="iniciarSesion(login)" class="btn btn-default" value="Iniciar" style="width: 100%;color:white;background-color: #3E92A3;border-color: transparent;font-size: 1.25em;" />
+			</div>
+		</div>
+</div>

@@ -6,20 +6,32 @@ var app = angular.module("app",[
 ])
 .config(function ($routeProvider) {
 	$routeProvider
-		.when('/',{
-			templateUrl: 'templates/bienvenido.html',
+		.when('/cv',{
+			templateUrl: 'templates/cv.html',
 			controller: 'generalCtrl'
 		})
-		.when('/agregarItem',{
-			templateUrl: 'templates/formAgregar.html',
+		.when('/login',{
+			templateUrl: 'templates/login.html',
+			controller: 'sesionCtrl'
+		})
+		.when('/vistaImpresion',{
+			templateUrl: 'templates/cvi.html',
 			controller: 'generalCtrl'
 		})
-		.when('/editarItem/:itemId',{
-			templateUrl: 'templates/formEditar.html',
+		.when('/vistaImpresionBasica',{
+			templateUrl: 'templates/cvbasic.html',
 			controller: 'generalCtrl'
+		})
+		.when('/agregarDatos',{
+			templateUrl: 'templates/agregarDatos.html',
+			controller: 'generalCtrl'
+		})
+		.when('/editarcv',{
+			templateUrl: 'templates/editarCV.html',
+			controller: 'crudCtrl'
 		})
 		.otherwise({
-			redirectTo: '/'
+			redirectTo: '/cv'
 		});
 })
 .run(function ($rootScope, $location) {

@@ -1,0 +1,196 @@
+<center>
+	 <nav style="margin-bottom: 0px;" class="navbar navbar-inverse">
+	    <div class="container-fluid">
+	      <!-- Brand and toggle get grouped for better mobile display -->
+	      <div class="navbar-header">
+	        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+	          <span class="sr-only">Toggle navigation</span>
+	          <span class="icon-bar"></span>
+	          <span class="icon-bar"></span>
+	          <span class="icon-bar"></span>
+	        </button>
+	        <a class="navbar-brand" href="#">CV</a>
+	      </div>
+
+	      <!-- Collect the nav links, forms, and other content for toggling -->
+	      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+	        <ul class="nav navbar-nav">
+	          <li><a href="#cv">Mi CV</a></li>
+	          <li><a href="#editarcv">Editar CV</a></li>
+	          <li><a target="_blank" href="#vistaImpresion">Impresión</a></li>
+	          <li><a target="_blank" href="#vistaImpresionBasica">Impresión básica</a></li>
+	        </ul>
+	        <ul class="nav navbar-nav navbar-right">
+	          <li><a href="" ng-click="cerrarSesion()">Cerrar sesión</a></li>
+	        </ul>
+	      </div><!-- /.navbar-collapse -->
+	    </div><!-- /.container-fluid -->
+	  </nav>
+	<div style="background-color: white; width: 90%; ">
+		<br>
+		<h3>Bienvenido, en esta sección podrás editar tu perfil, suerte!</h3><br>
+		<div class="panel-group transparencia" id="accordion1" >
+	              <div class="panel panel-default transparencia">
+	                  <div class="panel-heading accordion-toggle collapsed transparencia" data-toggle="collapse" data-target="#datosPersonales" data-parent="#accordion1,#accordion2,#accordion3">
+	                       <h3 class="panel-title">Datos personales</h3>
+	                       <div style="height: 5px;"></div>
+	                  </div>
+	                  <div id="datosPersonales" class="panel-collapse collapse transparencia">
+	                      <div align="left" class="panel-body">
+	                        <form >
+							  <div class="form-group col-sm-6">
+							    <label for="personaNombres">Nombres</label>
+							    <input type="text" ng-model="objPersona.nombres" class="form-control" id="personaNombres" placeholder="Nombres">
+							  </div>
+							  <div class="form-group col-sm-6">
+							    <label for="personaApellidos">Apellidos</label>
+							    <input type="text" ng-model="objPersona.apellidos" class="form-control" placeholder="Apellidos">
+							  </div>
+							  <div class="form-group col-sm-6">
+							    <label for="personaProfesion">Profesión</label>
+							    <input type="text" ng-model="objPersona.profesion" class="form-control" id="personaProfesion" placeholder="Profesión">
+							  </div>
+							  <div class="form-group col-sm-6">
+							    <label for="personaTelefono">Telefono:</label>
+							    <input type="phone" ng-model="objPersona.telefono" class="form-control" id="personaTelefono" placeholder="Telefono">
+							  </div>
+							  <div class="form-group col-sm-6">
+							    <label for="personaEmail">Correo:</label>
+							    <input type="email" ng-model="objPersona.correo" class="form-control" id="personaEmail" placeholder="Email">
+							  </div>
+							  <div class="form-group col-sm-6">
+							    <label for="personaHabilidades">Habilidades - Cada habilidad deberá separarla con una coma ",".</label>
+							    <textarea class="form-control" ng-model="objPersona.habilidades" id="personaHabilidades"></textarea>
+							  </div>
+							  <div class="form-group col-sm-6">
+							    <label for="personaIdioma">Idiomas - Cada idioma deberá separarla con una coma ",".</label>
+							    <textarea class="form-control" ng-model="objPersona.idiomas" id="personaIdioma"></textarea>
+							  </div>
+							  <div class="form-group col-sm-6">
+							    <label for="personaPerfil">Perfil</label>
+							    <textarea class="form-control" ng-model="objPersona.perfil" id="personaPerfil" placeholder="Perfil"></textarea>
+							  </div>
+							  	<div class="form-group col-xs-6 col-md-6 col-sm-6 col-lg-6" align="center">
+							  		<label>Imágen de Perfil:</label><br>
+							  		<progress value="0" max="100" id="uploader">0%</progress>
+								  	<input type="file" value="upload" id="fileButton">
+								  	<img style="width: 35%;height: 35%;" ng-src="{{objPersona.imgPerfil}}">
+							  	</div>
+							  	<div class="form-group col-xs-6 col-md-6 col-sm-6 col-lg-6" align="center">
+							  		<label>Imágen de Perfil 2:</label><br>
+							  		<progress value="0" max="100" id="uploader2">0%</progress>
+								  	<input type="file" value="upload2" id="fileButton2">
+								  	<img style="width: 35%;height: 35%;" ng-src="{{objPersona.imgHover}}">
+							  	</div>
+							  	<br><br>
+							  <div class="col-xs-6 col-md-6 col-sm-6 col-lg-6" align="center">
+							  	<button type="submit" ng-click="cancelarForm()" class="btn btn-default">Cancelar</button>	
+							  </div>
+							  <div class="col-xs-6 col-md-6 col-sm-6 col-lg-6" align="center">
+							  	<button type="submit" ng-click="editarPerfil()" class="btn btn-default">Aceptar</button>	
+							  </div>
+							</form>
+							<br>
+							<hr>							
+	                      </div>
+	                  </div>
+	              </div>
+	    </div>
+		<!-- -->
+		<div class="panel-group transparencia" id="accordion1">
+	      <div class="panel panel-default transparencia">
+	          <div class="panel-heading accordion-toggle collapsed transparencia" data-toggle="collapse" data-target="#experiencia1" data-parent="#accordion1,#accordion2,#accordion3">
+	               <h3 class="panel-title">Estudios</h3>
+	               <div style="height: 5px;"></div>
+	          </div>
+	          <div align="left" id="experiencia1" class="panel-collapse collapse ">
+	          	<form ng-hide="formEstudios">
+					  <div class="form-group col-sm-6">
+					    <label for="estudiosEscuela">Escuela</label>
+					    <input type="text" ng-model="objEstudios.escuela" class="form-control" id="estudiosEscuela" placeholder="Escuela">
+					  </div>
+					  <div class="form-group col-sm-6">
+					    <label for="estudiosFechas">Fechas</label>
+					    <input type="text" ng-model="objEstudios.fechas" class="form-control" id="estudiosFechas" placeholder="Fechas">
+					  </div>
+					  <div class="form-group col-sm-12">
+					    <label for="estudiosDescripcion">Descripción</label>
+					    <input type="text" ng-model="objEstudios.descripcion" class="form-control" id="estudiosDescripcion" placeholder="Descripción">
+					  </div>
+					  <center>
+					  	<button type="submit" ng-click="cancelarForm()" class="btn btn-default">Cancelar</button>
+					  	<button type="submit" ng-hide="btnAgregar" ng-click="agregarEstudios()" class="btn btn-default">Aceptar</button>
+					  	<button type="submit" ng-hide="btnEditar" ng-click="editarEstudios(objEstudios.$id)" class="btn btn-default">Editar</button>					  						  	
+					  </center>
+					  <br>
+					</form>
+	              <div class="panel-body" ng-repeat="estudios in objBDEstudios">
+	                <p>{{estudios.escuela}}</p>
+	                <p>{{estudios.descripcion}}</p>
+	                <p>{{estudios.fechas}}</p>
+	                <button class="btn btn-default" ng-click="irEditarEstudios(estudios)">Editar</button>
+	                <button type="submit" ng-hide="btnEditar" ng-click="eliminarEstudios(estudios)" class="btn btn-default">Eliminar</button>
+	                <button class="btn btn-default" ng-click="irAgregarEstudios()">Agregar</button>
+	              </div>
+	          </div>
+	      </div>
+	  	</div>
+	  	<!-- -->
+	  	<div class="panel-group transparencia" id="accordion1" >
+	      <div class="panel panel-default transparencia">
+	          <div class="panel-heading accordion-toggle collapsed transparencia" data-toggle="collapse" data-target="#experiencia2" data-parent="#accordion1,#accordion2,#accordion3">
+	               <h3 class="panel-title">Experiencia</h3>
+	               <div style="height: 5px;"></div>
+	          </div>
+	          <div align="left" id="experiencia2" class="panel-collapse collapse">
+	          	<form ng-hide="formExperiencia">
+					  <div class="form-group col-sm-6">
+					    <label for="experienciaEmpresa">Empresa</label>
+					    <input type="text" ng-model="objExperiencia.empresa" class="form-control" id="experienciaEmpresa" placeholder="Empresa">
+					  </div>
+					  <div class="form-group col-sm-6">
+					    <label for="experienciaCargo">Cargo</label>
+					    <input type="text" ng-model="objExperiencia.cargo" class="form-control" id="experienciaCargo" placeholder="Cargo">
+					  </div>					  
+					  <div class="form-group col-sm-6">
+					    <label for="experienciaFechas">Fechas</label>
+					    <input type="text" ng-model="objExperiencia.fecha" class="form-control" id="experienciaFechas" placeholder="Fechas">
+					  </div>
+					  <div class="form-group col-sm-6">
+					    <label for="experienciaDesCargo">Descripción del Cargo</label>
+					    <textarea type="text" ng-model="objExperiencia.descripcionCargo" class="form-control" id="experienciaDesCargo" placeholder="Descripción del cargo"></textarea>
+					  </div>
+					  <center>
+					  	<button type="submit" ng-click="cancelarForm()" class="btn btn-default">Cancelar</button>	
+					  	<button type="submit" ng-click="agregarExperiencia()" ng-hide="btnAgregar" class="btn btn-default">Aceptar</button>	
+					  	<button type="submit" ng-click="editarExperiencia(objExperiencia.$id)" ng-hide="btnEditar" class="btn btn-default">Editar</button>
+					  </center>
+					  <br>
+					</form>
+	              <div class="panel-body" ng-repeat="experiencia in objBDExperiencia">
+	                <p>{{experiencia.empresa}}</p>
+	                <p>{{experiencia.cargo}}</p>
+	                <p>{{experiencia.descripcionCargo}}</p>
+	                <p>{{experiencia.fechas}}</p>
+	                <p ng-hide="formExperiencia">Test</p>
+	                <button class="btn btn-default" ng-click="irEditarExperiencia(experiencia)">Editar</button>
+	                <button class="btn btn-default" ng-click="eliminarExperiencia(experiencia)">Eliminar</button>
+	                <button class="btn btn-default" ng-click="irAgregarExperiencia()">Añadir</button>
+	              </div>
+	          </div>
+	      </div>
+	  	</div>
+	  	<!-- <div>
+	  		<label class="col-md-4 control-label" for="pictures">Add Pictures</label>
+	  		<input id="pictures" type="file" ngf-select ng-model="files"  name="file"    
+                          accept="image/*" ngf-max-size="2MB" ngf-multiple="true" ngf-keep="true" ngf-keep-distinct="true" class="btn btn-primary"/>
+            <button ng-click="upImg()">Aceptar</button>
+	  	</div>-->
+	  	
+	</div>
+</center>
+<div style="height: 15px;"></div>
+<div id="perfilOK">Su perfil fue editado</div>
+
+<div id="fotoOK">Su foto fue subida</div>
+

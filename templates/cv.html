@@ -1,0 +1,179 @@
+<center ng-hide="sesion">
+  <nav style="margin-bottom: 0px;" class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">CV</a>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li><a href="#cv">Mi CV</a></li>
+          <li><a href="#editarcv">Editar CV</a></li>
+          <li><a target="_blank" href="#vistaImpresion">Impresión</a></li>
+          <li><a target="_blank" href="#vistaImpresionBasica">Impresión básica</a></li>
+          <li><a href="" data-toggle="modal" data-target="#modalConf">Configuración</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="" ng-click="cerrarSesion()">Cerrar sesión</a></li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
+</center>
+  <!-- Modal -->
+  <div class="modal fade" id="modalConf" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Configuración de CV</h4>
+        </div>
+        <div class="modal-body">
+          <p>Alto/largo del CV:</p>
+          <input type="number" min="980" name="" ng-model="objConfiguracion.alto">
+          <p>Colores del tema:</p>          
+          <div class="row">
+            <div class="col-xs-4 col-md-4 col-sm-4 col-lg-4" align="center">
+              <label>Tema 1</label>
+              <div style="background-color:#0F81C7;width: 50px;">&nbsp;</div>
+              <div style="background-color:#015668;width: 50px;">&nbsp;</div>
+              <input type="radio" value="tema1" name="tema" ng-model="objConfiguracion.tema">
+            </div>
+            <div class="col-xs-4 col-md-4 col-sm-4 col-lg-4" align="center">
+              <label>Tema 2</label>                            
+              <div style="background-color:#2471A3;width: 50px;">&nbsp;</div>
+              <div style="background-color:#353940;width: 50px;">&nbsp;</div>
+              <input type="radio" value="tema2" name="tema" ng-model="objConfiguracion.tema">
+            </div>
+            <div class="col-xs-4 col-md-4 col-sm-4 col-lg-4" align="center">
+              <label>Tema 3</label>
+              <div style="background-color:#2C5D63;width: 50px;">&nbsp;</div>
+              <div style="background-color:#283739;width: 50px;">&nbsp;</div>
+              <input type="radio" value="tema3" name="tema" ng-model="objConfiguracion.tema">
+            </div>
+
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="guardarConf(objConfiguracion)">Aceptar</button>
+          <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+<div class="fondo1" ng-style="colorFndTema">
+<div class="separador1"></div>
+    <div class="container">
+    <div class="separador2"></div>
+      <div class="contenedor">
+        <div class="row">
+          <div class="col-xs-12 col-md-4 col-sm-4 col-lg-4 columna1 animated rotateInUpLeft" ng-style="colorFndSubTema">
+            <div id="fdn" class="animated fadeIn">
+              <center style="">
+                <center class="fondoPerfil">
+                  <div class="images-container">
+                    <img id="imgFP" src="{{objP.imgPerfil}}">
+                    <img id="imgFPH" src="{{objP.imgHover}}">
+                </div>
+                </center><br>
+                <h1 class="datos">{{objP.nombres}} <br> {{objP.apellidos}}</h1>
+                <h4 class="datos">{{objP.profesion}}</h4>
+              </center>
+              <br>
+              <div class="row" align="center">
+                  <h2 class="contacto datos" align="center">CONTACTO</h2>
+                  <table>
+                    <tr align="center">
+                      <td><img class="hvr-buzz icono" src="img/icon_phone.png"></td>                  
+                    </tr>
+                    <tr align="center">
+                      <td class="datos">&nbsp;{{objP.telefono}}</td>
+                    </tr>
+                    <tr align="center">
+                      <td><img class="hvr-wobble-to-bottom-right icono" src="img/icon_mail.png"></td>
+                    </tr>
+                    <tr align="center">
+                      <td class="datos" >&nbsp;{{objP.correo}}</td>
+                    </tr>
+                  </table>
+                </div>
+                <div class="row" align="center">
+                  <h2 class="contacto datos" align="center">HABILIDADES</h2>
+                  <span class="conocimientos" align="center" ng-repeat="h in OHabilidades">{{h}}<br></span>
+                </div>
+                <div class="row" align="center">
+                  <h2 class="contacto datos" align="center">IDIOMAS</h2>
+                  <span class="conocimientos" align="center" ng-repeat="i in OIdiomas">{{i}}<br></span>
+                </div>
+            </div>
+          </div>
+          <div class="col-xs-12 col-md-8 col-sm-8 col-lg-8 columna2 animated rotateInUpRight" ng-style="colorTmnSubTema">
+            <div id="fdn2" class="animated fadeIn">
+              <table class="animated">
+                  <tr><br>
+                    <td><img class="icono" src="img/icon_user.png"></td>
+                    <td class="subtitulo">&nbsp;&nbsp;&nbsp;PERFIL & OBJETIVOS</td>
+                  </tr>
+              </table><br>
+              <p class="parrafo">
+                {{objP.perfil}}
+              </p><br>
+              <table>
+                  <tr><br>
+                    <td><img class="icono" src="img/icon_student.png"></td>
+                    <td class="subtitulo">&nbsp;&nbsp;&nbsp;EDUCACIÓN</td>
+                  </tr>
+              </table><br>
+              <div class="panel-group" id="accordion1" ng-repeat="escuela in objBDEstudios">
+                  <div class="panel panel-default transparencia">
+                      <div class="panel-heading accordion-toggle collapsed transparencia" data-toggle="collapse" data-target="#{{escuela.$id}}" data-parent="#accordion1,#accordion2,#accordion3">
+                           <h3 class="panel-title escuela">{{escuela.escuela}}
+                           <span class="pull-right escuelaF">{{escuela.fechas}}</span>
+                           </h3>
+                      </div>
+                      <div id="{{escuela.$id}}" class="panel-collapse collapse">
+                          <div class="panel-body">
+                            <p>{{escuela.descripcion}}</p>
+                            <p>Ubicación</p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <table class="">
+                  <tr><br>
+                    <td><img class="icono"  src="img/icon_work.png"></td>
+                    <td class="subtitulo">&nbsp;&nbsp;&nbsp;EXPERIENCIA LABORAL</td>
+                  </tr>
+              </table><br>
+              <div class="panel-group" id="accordion1" ng-repeat="experiencia in objBDExperiencia">
+                <div class="panel panel-default transparencia">
+                    <div class="panel-heading accordion-toggle collapsed transparencia" data-toggle="collapse" data-target="#{{experiencia.$id}}" data-parent="#accordion1,#accordion2,#accordion3">
+                         <h3 class="panel-title escuela" >{{experiencia.empresa}}
+                           <span class="pull-right escuelaF">{{experiencia.fecha}}</span>
+                         </h3>
+                    </div>
+                    <div id="{{experiencia.$id}}" class="panel-collapse collapse">
+                        <div class="panel-body">
+                          <p>{{experiencia.cargo}}</p>
+                          <p>{{experiencia.descripcionCargo}}</p>
+                        </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
