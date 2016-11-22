@@ -22,10 +22,6 @@ var app = angular.module("app",[
 			templateUrl: 'templates/cvbasic.html',
 			controller: 'generalCtrl'
 		})
-		.when('/agregarDatos',{
-			templateUrl: 'templates/agregarDatos.html',
-			controller: 'generalCtrl'
-		})
 		.when('/editarcv',{
 			templateUrl: 'templates/editarCV.html',
 			controller: 'crudCtrl'
